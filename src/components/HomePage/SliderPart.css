@@ -1,0 +1,63 @@
+.line  {
+    width: 20%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-bottom: 40px;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 50px;
+}
+.slider-part span{
+color: red;
+}
+.slider-part .carousel.Caption{
+    top: 50px;
+}
+.carousel-caption {
+  top: 40% !important;      /* move down 50% */
+  left: 35% !important;    /* move right 50% */
+  transform: translate(-50%, -50%); 
+  text-align: left !important;       
+}
+.heading h1{
+    font-size: 56px;
+}
+.heading p{
+    font-size: 15px;
+}
+
+
+@media (min-width:320px) and (max-width:480px){
+    .heading h1{
+        font-size:25px;
+        width: 170% !important;
+        text-align: center;       
+    }
+     .heading p{
+        font-size:15px;
+        width: 170% !important;
+        text-align: center;       
+    }
+    .line{
+        width: 170%;
+        height: 3px;
+    }
+    .btn-grup button{
+        display: block;
+       
+
+    }
+    .btn-grup {
+   margin-right: 25px;
+   
+}
+.btn-grup .btn-1{
+    width: 190%;
+}
+ .btn-grup .btn-2{
+    margin-top: 20px;
+     width: 190%;  
+ }
+
+}

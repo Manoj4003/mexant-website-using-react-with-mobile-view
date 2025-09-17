@@ -1,0 +1,35 @@
+/* Menu Bar Part */
+.menu-list{
+    background-color: #212741;
+
+}
+.menu-list{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1020 !;
+}
+.nav-link
+{
+    color: #fff !important;
+}
+.menu-list .nav-link:hover {
+  color: #dd390b !important;         
+}
+.menu-list .nav-link:focus {
+  color: #dd390b !important;
+}
+@media (min-width:320px) and (max-width:480px)
+{
+    .menu-list img{
+        height: 50px;
+    }
+   .navbar-toggler{
+    background-color:#fff;
+    border: none !important ;
+    outline: none;
+   }
+   
+    .menu-list .nav-link{
+        text-align: center;
+    }
+}

@@ -1,0 +1,28 @@
+.footer-part{
+    background-image: url('../../assets/client-01.png');
+    height: 20vh;
+    background-position:center;
+    background-repeat: repeat-x;
+    background-color: #212741;
+    cursor: pointer;
+    
+}
+.copy-rights p{
+    padding-top: 45px;
+}
+.copy-rights{
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    height: 20vh;
+  
+}
+.copy-rights span{
+    color: orangered !important;
+}
+@media (max-width:480px)
+{
+    .copy-rights{
+        height: 30vh!important;
+    }
+}

@@ -12,6 +12,7 @@ import About from "../AboutPart/About";
 import Form from "../FormPart/Form";
 import TestiMonials from "../TestimonialsPart/Testimonials";
 import Footer from "../FooterSection/Footer";
+import PagesAboutus from "../PagesAboutus/PagesAboutus";
 
 function CollapsibleExample() {
   return (
@@ -67,6 +68,7 @@ function CollapsibleExample() {
       <Form/>
       <TestiMonials/>
       <Footer/>
+      <PagesAboutus/>
     </section>
   );
 }

@@ -10,11 +10,13 @@ import { FaChargingStation } from "react-icons/fa6";
 import { FaSuitcase } from "react-icons/fa";
 import { FaArchway } from "react-icons/fa6";
 import { FaPuzzlePiece } from "react-icons/fa6";
-import Button from 'react-bootstrap/Button';
+
 
 export default function Service() {
   return (
     <div>
+        
+
       <div className="service-part py-5">
         <Container>
           <Row>
@@ -122,15 +124,7 @@ export default function Service() {
           </Row>
         </Container>
       </div>
-      <div className="Business-solution ">
-        <div className="tittle">
-          <h1 className="text-white">Business <span>Solutions</span>  and  <br /><em>Crypto </em> Investments</h1>
-        </div>
-        <div className="btn-grup2  d-md-flex ">
-          <Button variant="success" className="btn-1">Success</Button>
-          <Button variant="danger" className="btn-2 mx-md-5  ">Danger</Button>
-        </div>
-      </div>
+      
     </div>
   );
 }

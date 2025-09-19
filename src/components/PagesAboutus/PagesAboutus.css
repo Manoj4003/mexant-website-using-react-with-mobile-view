@@ -1,11 +1,46 @@
-.pages-about-us{
+.pages-about-us {
     background-image: url('../../assets/slide-01.jpg');
     height: 30vh;
 }
-.pages-about-us .line-part{
+
+.pages-about-us .line-part {
     height: 3px;
     width: 100px;
     background-color: #fff;
-    margin:  0 auto;
- 
+    margin: 0 auto;
+
+}
+
+.accordion-button:focus {
+    color: rgb(19, 202, 19) !important;
+    box-shadow: none !important;
+    font-weight: bolder;
+}
+
+.shadow {
+    border-radius: 5px !important;
+}
+
+.shadow {
+    transition: all 0.3s ease-in-out;
+    /* smooth effect for the whole card */
+}
+
+.shadow:hover .card-tittle h3 {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width:480px) {
+    .about-img img {
+        width: 100%;
+    }
+    .shadow {
+        width: 90% !important;
+        margin-left: 15px !important;
+    }
+    .shadow2{
+      width: 100% !important;
+        margin-left: -1px !important;
+    }
 }

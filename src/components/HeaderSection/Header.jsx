@@ -13,12 +13,15 @@ import Form from "../FormPart/Form";
 import TestiMonials from "../TestimonialsPart/Testimonials";
 import Footer from "../FooterSection/Footer";
 import PagesAboutus from "../PagesAboutus/PagesAboutus";
+import BusinessSolution from "../BusinessSolution/BusinessSolution";
+import PagesContactus from "../PagesContactus/PagesContactus";
+import PagesOurService from "../PagesOurService/PagesOurService";
 
 function CollapsibleExample() {
   return (
     <section>
       <div className="menu-bar ">
-        <div className="menu-list sticky-md-top">
+        <div className="menu-list ">
           <Navbar collapseOnSelect expand="lg">
             <Container>
               <img src={logo} alt="" />
@@ -35,7 +38,7 @@ function CollapsibleExample() {
                   <Nav.Link href="#deets" className="px-4">
                     About
                   </Nav.Link>
-                  <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+                  <NavDropdown title="Pages" id="collapsible-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">
                       About Us
                     </NavDropdown.Item>
@@ -64,11 +67,14 @@ function CollapsibleExample() {
       </div>
       <SliderPart/>
       <Service/>
+      <BusinessSolution/>
       <About/>
       <Form/>
       <TestiMonials/>
       <Footer/>
       <PagesAboutus/>
+      <PagesContactus/>
+      <PagesOurService/>
     </section>
   );
 }

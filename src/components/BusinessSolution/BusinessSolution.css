@@ -1,0 +1,50 @@
+
+.Business-solution{
+    background-image: url('../../assets/cta-bg.jpg');
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Business-solution{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Business-solution span{
+    color: rgb(27, 189, 27);
+}
+.Business-solution em{
+    color: red;
+}
+
+
+@media (max-width:480px) {
+    .Business-solution {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .btn-grup2 {
+        margin-left: 80px !important;
+    }
+
+    .btn-grup2 .btn-2 {
+        margin: 10px;
+    }
+
+    .tittle h1 {
+        padding: 25px;
+        font-size: 20px;
+        text-align: center;
+
+    }
+
+    .Business-solution h1 {
+        margin-top: -75px;
+    }
+
+    .btn-grup2 {
+        margin-top: -88px;
+    }
+}

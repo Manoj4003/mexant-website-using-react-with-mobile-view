@@ -9,11 +9,10 @@ import BusinessSolution from "../BusinessSolution/BusinessSolution";
 import servicedetails1 from '../../assets/service-details-01.jpg';
 import servicedetails2 from '../../assets/service-details-02.jpg';
 import servicedetails3 from '../../assets/service-details-03.jpg';
-import Footer from "../FooterSection/Footer";
 function PagesOurService() {
   return (
     <div>
-      <div className="Pages-our-service ">
+      <div className="Pages-our-service py-5 mt-5">
         <h1 className="text-white">Our Services</h1>
         <div className="line-part"></div>
       </div>
@@ -221,7 +220,7 @@ function PagesOurService() {
       </Row>
     </Container>
   
-<Footer/>
+
     </div>
   );
 }

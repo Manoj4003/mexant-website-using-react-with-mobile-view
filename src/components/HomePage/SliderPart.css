@@ -15,7 +15,7 @@ color: red;
     top: 50px;
 }
 .carousel-caption {
-  top: 40% !important;      /* move down 50% */
+  top: 45% !important;      /* move down 50% */
   left: 35% !important;    /* move right 50% */
   transform: translate(-50%, -50%); 
   text-align: left !important;       

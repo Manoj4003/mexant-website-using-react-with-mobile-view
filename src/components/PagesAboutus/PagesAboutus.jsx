@@ -1,18 +1,17 @@
 import React from "react";
-import "./PagesAboutus.css";
+import './PagesAboutus.css';
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import leftimg from "../../assets/about-left-image.jpg";
 import BusinessSolution from "../BusinessSolution/BusinessSolution";
 
-import Footer from "../FooterSection/Footer";
 
 export default function PagesAboutus() {
   return (
     <div>
       {/* Top Banner */}
-      <div className="pages-about-us text-center">
+      <div className="pages-about-us text-center py-5 mt-5">
         <div className="tittle">
           <h1 className="text-white fw-bolder">About Us</h1>
           <div className="line-part"></div>
@@ -151,7 +150,7 @@ export default function PagesAboutus() {
           </Col>
         </Row>
       </Container>
-      <Footer />
+    
     </div>
   );
 }

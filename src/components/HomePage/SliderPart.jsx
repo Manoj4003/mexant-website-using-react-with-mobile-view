@@ -5,10 +5,14 @@ import slider_1 from "../../assets/slide-01.jpg";
 import slider_2 from "../../assets/slide-02.jpg";
 import slider_3 from "../../assets/slide-03.jpg";
 import Button from 'react-bootstrap/Button';
-
+import Service from '../ServicePart/Service';
+import BusinessSolution from "../BusinessSolution/BusinessSolution";
+import About from '../AboutPart/About';
+import Form from '../FormPart/Form';
+import Testimonials from '../TestimonialsPart/Testimonials';
 export default function SliderPart() {
   return (
-    <div className="slider-part">
+    <div className="slider-part ">
       <Carousel>
         <Carousel.Item>
           <img src={slider_1} alt="Slider 1" />
@@ -69,6 +73,11 @@ export default function SliderPart() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <Service/>
+      <BusinessSolution/>
+      <About/>
+      <Form/>
+      <Testimonials/>
     </div>
   );
 }

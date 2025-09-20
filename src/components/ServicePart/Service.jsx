@@ -17,7 +17,7 @@ export default function Service() {
     <div>
         
 
-      <div className="service-part py-5">
+      <div className="service-part py-5 mt-5">
         <Container>
           <Row>
             <Col md={6} className="mt-5">

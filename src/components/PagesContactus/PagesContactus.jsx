@@ -2,15 +2,14 @@ import React from 'react';
 import './PagesContactus.css';
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
-import Footer from "../FooterSection/Footer";
 
 
 const PagesContactus = () => {
   return (
     <div>
       {/* Header Section */}
-      <div className="pages-contact-us text-center py-5">
-        <h1 className="text-white">Contact Us</h1>
+      <div className="pages-contact-us text-center py-5 mt-5">
+        <h1 className="text-white ">Contact Us</h1>
         <div className="line-part"></div>
       </div>
 
@@ -151,7 +150,7 @@ const PagesContactus = () => {
           </Col>
         </Row>
       </Container>
-       <Footer/>
+       
     </div>
   );
 }

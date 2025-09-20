@@ -8,11 +8,11 @@ import './About.css';
 
 function About() {
   return (
-    <div className="about_us_part py-5">
+    <div className="about_us_part py-5 mt-5 ">
       {/* Section Heading */}
       <Container fluid>
         <Row>
-          <Col className="text-center mb-4">
+          <Col className="text-center mb-4 py-5">
             <h5 className="text-danger">ABOUT US</h5>
             <h1>Know Us Better</h1>
           </Col>

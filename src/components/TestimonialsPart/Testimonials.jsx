@@ -9,10 +9,10 @@ import client from "../../assets/testimonials-01.jpg";
 
 function TestiMonials() {
   return (
-    <div className="TestiMonials_part py-5">
+    <div className="TestiMonials_part py-5 mt-5">
       <Container>
         <Row>
-          <Col className="text-center">
+          <Col className="text-center py-5">
             <h5 className="text-danger">TESTIMONIALS</h5>
             <h1 className="fw-bolder">What They Say</h1>
           </Col>

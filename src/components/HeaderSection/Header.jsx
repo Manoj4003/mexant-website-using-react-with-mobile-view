@@ -6,22 +6,12 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../../assets/logo.png";
 import Button from "react-bootstrap/Button";
-import SliderPart from "../HomePage/SliderPart";
-import Service from "../ServicePart/Service";
-import About from "../AboutPart/About";
-import Form from "../FormPart/Form";
-import TestiMonials from "../TestimonialsPart/Testimonials";
-import Footer from "../FooterSection/Footer";
-import PagesAboutus from "../PagesAboutus/PagesAboutus";
-import BusinessSolution from "../BusinessSolution/BusinessSolution";
-import PagesContactus from "../PagesContactus/PagesContactus";
-import PagesOurService from "../PagesOurService/PagesOurService";
 
 function CollapsibleExample() {
   return (
     <section>
       <div className="menu-bar ">
-        <div className="menu-list ">
+        <div className="menu-list sticky-md-top">
           <Navbar collapseOnSelect expand="lg">
             <Container>
               <img src={logo} alt="" />
@@ -29,52 +19,43 @@ function CollapsibleExample() {
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto"></Nav>
                 <Nav>
-                  <Nav.Link href="#deets" className="px-4">
+                  <Nav.Link href="/" className="px-4">
                     Home
                   </Nav.Link>
-                  <Nav.Link href="#deets" className="px-4">
+                  <Nav.Link href="/services" className="px-4">
                     Services
                   </Nav.Link>
-                  <Nav.Link href="#deets" className="px-4">
+                  <Nav.Link href="/about" className="px-4">
                     About
                   </Nav.Link>
-                  <NavDropdown title="Pages" id="collapsible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
+                  <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+                    <NavDropdown.Item href="/pagesaboutus">
                       About Us
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
+                    <NavDropdown.Item href="/pageourservice">
                       Our Services
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
+                    <NavDropdown.Item href="/pagescontactus">
                       Contact Us
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#deets" className="px-4">
+                  <Nav.Link href="/testnominals" className="px-4">
                     Testimonials
                   </Nav.Link>
-                  <Button variant="success">Contact Support</Button>
+
+                  <Nav.Item className="d-flex align-items-center px-3">
+                    <Button href="/form" variant="success">
+                      Contact Support
+                    </Button>
+                  </Nav.Item>
                 </Nav>
               </Navbar.Collapse>
-              
             </Container>
-            
           </Navbar>
-          
- 
         </div>
-       
-      
       </div>
-      <SliderPart/>
-      <Service/>
-      <BusinessSolution/>
-      <About/>
-      <Form/>
-      <TestiMonials/>
-      <Footer/>
-      <PagesAboutus/>
-      <PagesContactus/>
-      <PagesOurService/>
+     
+      
     </section>
   );
 }

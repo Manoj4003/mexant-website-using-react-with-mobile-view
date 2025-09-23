@@ -43,4 +43,11 @@
       width: 100% !important;
         margin-left: -1px !important;
     }
+    .accordian-part{
+        padding-top: 50px;
+    }
+    .btn button{
+       text-align: center !important;
+       margin-left: 54px;
+    }
 }

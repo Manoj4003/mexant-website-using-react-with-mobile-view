@@ -1,5 +1,5 @@
 .background_img {
-  background-image: url('../../assets/calculator-bg.jpg');
+  background-image: url("../../assets/calculator-bg.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,4 +40,27 @@
 
 .btn-orange:hover {
   background-color: #e65c00;
+}
+
+/* === Form Validation Styling === */
+.text-danger {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 0 0.2rem rgba(255, 102, 0, 0.25);
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
 }

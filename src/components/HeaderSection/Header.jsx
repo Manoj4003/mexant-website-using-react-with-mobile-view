@@ -4,21 +4,21 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import logo from "../../assets/logo.png";
 import Button from "react-bootstrap/Button";
+import logo from "../../assets/logo.png";
 
-function CollapsibleExample() {
+function Header() {
   return (
     <section>
-      <div className="menu-bar ">
-        <div className="menu-list sticky-md-top">
+      <div className="menu-bar">
+        <div className="menu-list">
           <Navbar collapseOnSelect expand="lg">
             <Container>
-              <img src={logo} alt="" />
+              <img src={logo} alt="Logo" />
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto"></Nav>
-                <Nav>
+                <Nav className="nav-items">
                   <Nav.Link href="/" className="px-4">
                     Home
                   </Nav.Link>
@@ -28,7 +28,7 @@ function CollapsibleExample() {
                   <Nav.Link href="/about" className="px-4">
                     About
                   </Nav.Link>
-                  <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+                  <NavDropdown title="Pages" id="collapsible-nav-dropdown">
                     <NavDropdown.Item href="/pagesaboutus">
                       About Us
                     </NavDropdown.Item>
@@ -54,10 +54,8 @@ function CollapsibleExample() {
           </Navbar>
         </div>
       </div>
-     
-      
     </section>
   );
 }
 
-export default CollapsibleExample;
+export default Header;

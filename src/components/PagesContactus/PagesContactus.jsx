@@ -1,10 +1,79 @@
-import React from 'react';
-import './PagesContactus.css';
+import React, { useState } from "react";
+import "./PagesContactus.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaEnvelope, FaPhone, FaMapMarkedAlt } from "react-icons/fa";
 
-
 const PagesContactus = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Validation logic
+  const validate = () => {
+    let newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Phone number is required";
+    } else if (!/^[0-9]{10}$/.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    return newErrors;
+  };
+
+  // Submit handler
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+
+    if (Object.keys(validationErrors).length === 0) {
+      alert("✅ Message sent successfully!");
+      console.log("Form Data:", formData);
+
+      // Reset form
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
   return (
     <div>
       {/* Header Section */}
@@ -35,21 +104,25 @@ const PagesContactus = () => {
           <Col lg={{ span: 10, offset: 1 }} className="mt-4">
             <Row>
               <Col lg={4} className="mb-4">
-                <div className="info-item text-center">
+                <div className="info-item text-center shadow p-5">
                   <FaEnvelope size={24} className="mb-2 text-success fw-bolder" />
                   <h4>Email Address</h4>
-                  <a href="mailto:info@company.com" className="text-success fw-bold">info@company.com</a>
+                  <a href="mailto:info@company.com" className="text-success fw-bold">
+                    info@company.com
+                  </a>
                 </div>
               </Col>
               <Col lg={4} className="mb-4">
-                <div className="info-item text-center">
+                <div className="info-item text-center shadow p-5">
                   <FaPhone size={24} className="mb-2 text-success fw-bolder" />
                   <h4>Phone Number</h4>
-                  <a href="tel:0100200340" className="text-success fw-bold">010-020-0340</a>
+                  <a href="tel:0100200340" className="text-success fw-bold">
+                    010-020-0340
+                  </a>
                 </div>
               </Col>
               <Col lg={4} className="mb-4">
-                <div className="info-item text-center">
+                <div className="info-item text-center shadow p-5">
                   <FaMapMarkedAlt size={24} className="mb-2 text-success fw-bolder" />
                   <h4>Address</h4>
                   <a
@@ -80,7 +153,7 @@ const PagesContactus = () => {
 
         <Row>
           <Col lg={10} className="offset-lg-1">
-            <Form id="contact" method="post">
+            <Form id="contact" onSubmit={handleSubmit} noValidate>
               <Row>
                 <Col lg={6} className="mb-3">
                   <Form.Group controlId="formName">
@@ -88,8 +161,13 @@ const PagesContactus = () => {
                       type="text"
                       name="name"
                       placeholder="Your Name..."
-                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      isInvalid={!!errors.name}
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.name}
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
 
@@ -99,8 +177,13 @@ const PagesContactus = () => {
                       type="tel"
                       name="phone"
                       placeholder="Your Phone..."
-                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      isInvalid={!!errors.phone}
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.phone}
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
 
@@ -110,8 +193,13 @@ const PagesContactus = () => {
                       type="email"
                       name="email"
                       placeholder="Your E-mail..."
-                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      isInvalid={!!errors.email}
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.email}
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
 
@@ -121,7 +209,13 @@ const PagesContactus = () => {
                       type="text"
                       name="subject"
                       placeholder="Subject..."
+                      value={formData.subject}
+                      onChange={handleChange}
+                      isInvalid={!!errors.subject}
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.subject}
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
 
@@ -132,16 +226,18 @@ const PagesContactus = () => {
                       name="message"
                       rows={4}
                       placeholder="Your Message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      isInvalid={!!errors.message}
                     />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.message}
+                    </Form.Control.Feedback>
                   </Form.Group>
                 </Col>
 
                 <Col lg={12} className="text-center">
-                  <Button
-                    type="submit"
-                    id="form-submit"
-                    className="orange-button"
-                  >
+                  <Button type="submit" id="form-submit" className="orange-button">
                     Send Message
                   </Button>
                 </Col>
@@ -150,9 +246,8 @@ const PagesContactus = () => {
           </Col>
         </Row>
       </Container>
-       
     </div>
   );
-}
+};
 
 export default PagesContactus;

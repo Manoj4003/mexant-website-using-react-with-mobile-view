@@ -24,7 +24,7 @@ export default function PagesAboutus() {
           <Col md={6} className="about-img">
             <img src={leftimg} alt="About Us" className="img-fluid" />
           </Col>
-          <Col md={6}>
+          <Col md={6} className="accordian-part">
             <Accordion defaultActiveKey="0" className="shadow">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Mexant Financial Planning</Accordion.Header>
@@ -87,7 +87,7 @@ export default function PagesAboutus() {
               Morbi sed dolor condimentum tellus commodo volutpat non malesuada
               turpis.
             </p>
-            <div className="py-3">
+            <div className="py-3 btn">
               <Button variant="success">Discover More</Button>
             </div>
           </Col>
